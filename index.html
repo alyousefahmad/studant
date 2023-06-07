@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>University of Jordan</title>
+ <meta charset="utf-8">
+    <link rel="stylesheet" href="../test/css/style.css">
+</head>
+<body>
+
+ <script>
+  var students = [];
+var averages = [];
+
+for (var i = 0; i < 10; i++) {
+  var studentName = prompt("Enter student name:");
+  var studentAverage = parseFloat(prompt("Enter student average:"));
+  
+  students.push(studentName);
+  averages.push(studentAverage);
+}
+
+var table = "<table><tr><th>Name</th><th>Average</th><th>Grade</th></tr>";
+
+for (var i = 0; i < students.length; i++) {
+  var grade;
+  
+  if (averages[i] >= 90) {
+    grade = "Excellent";
+  } else if (averages[i] >= 80) {
+    grade = "Very Good";
+  } else if (averages[i] >= 70) {
+    grade = "Good";
+  } else if (averages[i] >= 60) {
+    grade = "Acceptable";
+  } else if (averages[i] >= 50) {
+    grade = "Poor";
+  } else {
+    grade = "Failing";
+  }
+  
+  table += "<tr><td>" + students[i] + "</td><td>" + averages[i] + "</td><td>" + grade + "</td></tr>";
+}
+
+table += "</table>";
+
+document.body.innerHTML = table;
+ </script>
+
+</body>
+</html>

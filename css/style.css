@@ -1,0 +1,11 @@
+body
+{
+background-image: url(../image/jordan_136036.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+color:black;
+margin-top: 25px;
+margin-left: 150px;
+font-size: larger;
+}
